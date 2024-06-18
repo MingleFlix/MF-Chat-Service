@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const cors = require('cors');
-const axios = require('axios');
+// const axios = require('axios'); // 
 
 const app = express();
 app.use(cors());
@@ -20,14 +20,18 @@ io.on('connection', (socket) => {
   console.log('New client connected');
 
   socket.on('join', async (username) => {
-    try {
-      const response = await axios.get(`http://localhost:5000/users/${username}`);
-      const user = response.data;
-      console.log(`${user.name} joined the chat`);
-      socket.broadcast.emit('message', { user: 'admin', text: `${user.name} has joined the chat` });
-    } catch (error) {
-      console.error('Error fetching user:', error);
-    }
+    // Entfernen oder Auskommentieren der Axios-Abfrage
+    // try {
+    //   const response = await axios.get(`http://localhost:5000/users/${username}`);
+    //   const user = response.data;
+    //   console.log(`${user.name} joined the chat`);
+    //   socket.broadcast.emit('message', { user: 'admin', text: `${user.name} has joined the chat` });
+    // } catch (error) {
+    //   console.error('Error fetching user:', error);
+    // }
+
+    console.log(`${username} joined the chat`);
+    socket.broadcast.emit('message', { user: 'admin', text: `${username} has joined the chat` });
   });
 
   socket.on('message', (message) => {
