@@ -1,0 +1,32 @@
+replicaCount: 1
+revisionHistoryLimit: 3
+
+image:
+  repository: ghcr.io/mingleflix/chat-service
+  pullPolicy: IfNotPresent
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3003
+
+containerPort: 3003
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+imagePullSecrets:
+  - name: ghcr-io-secret
+
+jwtSecret:
+  name: jwt-secret
+  key: JWT_SECRET
+
+env:
+  REDIS_HOST: room-management-redis-master
