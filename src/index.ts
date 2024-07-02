@@ -104,7 +104,7 @@ function handleMessageEvent(user: User, event: MessageEvent, roomId: string) {
         timestamp: new Date().toISOString(),
         email: user.email,
         userId: user.userId,
-        name: user.name,
+        name: user.username,
         message: event.message,
     } satisfies BroadcastMessageEvent);
 
