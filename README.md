@@ -1,4 +1,4 @@
-# MF-Char-Service
+# MF-Chat-Service
 
 This service is responsible for managing the chat for each room.
 
