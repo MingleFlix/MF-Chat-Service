@@ -94,6 +94,19 @@ wss.on("connection", async (ws, req) => {
         subscriber.dispose();
         console.log("Closed websocket");
     });
+
+    // Send ping messages every 30 seconds (keep the connection alive)
+    const pingInterval = setInterval(() => {
+        if (ws.readyState === ws.OPEN) {
+            ws.ping();
+        } else {
+            clearInterval(pingInterval);
+        }
+    }, 30000);
+
+    ws.on('pong', () => {
+        console.log('Pong received');
+    });
 });
 
 // Event Handlers
