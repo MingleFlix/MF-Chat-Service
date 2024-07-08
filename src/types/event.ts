@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+/*
+ * Author: Pham Van Nguyen
+ * Matrikelnummer: 2507925
+ */
+
 export const MessageEventSchema = z.object({
     type: z.literal("message"),
     message: z.string(),

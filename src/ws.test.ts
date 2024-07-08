@@ -5,6 +5,11 @@ import { startServer } from "./server";
 import { generateUserToken } from "./tests/auth-helpers";
 import { EventSchema, MessageEvent } from "./types/event";
 
+/*
+ * Author: Pham Van Nguyen
+ * Matrikelnummer: 2507925
+ */
+
 dotenv.config();
 
 const ROOM_ID = "RAOUM1";

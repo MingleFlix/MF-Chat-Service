@@ -4,6 +4,11 @@ import dotenv from "dotenv";
 import { startServer } from "./server";
 import { Server } from "http";
 
+/*
+ * Author: Pham Van Nguyen
+ * Matrikelnummer: 2507925
+ */
+
 dotenv.config();
 
 let app: Server;

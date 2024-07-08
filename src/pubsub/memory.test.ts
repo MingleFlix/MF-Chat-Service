@@ -1,5 +1,10 @@
 import { InMemoryPubSub } from "./memory";
 
+/*
+ * Author: Pham Van Nguyen
+ * Matrikelnummer: 2507925
+ */
+
 describe("Memory PubSub", () => {
     test("publish messages to unsubscribed channel", async () => {
         const pubsub = new InMemoryPubSub();

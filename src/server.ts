@@ -11,6 +11,11 @@ import {
 import { User, UserSchema } from "./types/user";
 import { Server } from "http";
 
+/*
+ * Author: Pham Van Nguyen
+ * Matrikelnummer: 2507925
+ */
+
 export function startServer(): Server {
     const app = express();
     const port = process.env.PORT || 3003;

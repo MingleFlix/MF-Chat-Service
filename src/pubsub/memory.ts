@@ -2,6 +2,11 @@ import { PubSub, Subscriber } from ".";
 
 import { randomUUID } from "node:crypto";
 
+/*
+ * Author: Pham Van Nguyen
+ * Matrikelnummer: 2507925
+ */
+
 type Sub = (message: string) => void;
 
 type Channel = {

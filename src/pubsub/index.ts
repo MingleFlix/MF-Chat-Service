@@ -1,3 +1,8 @@
+/*
+ * Author: Pham Van Nguyen
+ * Matrikelnummer: 2507925
+ */
+
 export interface Subscriber {
     dispose(): Promise<void>;
 }

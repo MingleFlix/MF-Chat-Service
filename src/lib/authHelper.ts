@@ -1,5 +1,10 @@
 import jwt from "jsonwebtoken";
 
+/*
+ * Author: Pham Van Nguyen
+ * Matrikelnummer: 2507925
+ */
+
 export interface JWTPayload {
   userId: string;
   email: string;
