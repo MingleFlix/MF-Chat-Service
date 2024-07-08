@@ -1,3 +1,5 @@
+# Keep this at one replica because the current in-memory pubsub implementation isn't distributed.
+# TODO: Implement a redis based pubsub and then optionally increase the replica count.
 replicaCount: 1
 revisionHistoryLimit: 3
 
